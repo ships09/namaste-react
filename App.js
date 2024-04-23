@@ -65,7 +65,7 @@ const Body = () => {
 }
 const RestaurantCard = () => {
     return (
-        <div className="rest-card" style={styleCard}>
+        <div className="rest-card" style={{background:"pink"}}>
             <h3>Madras Cafe</h3>
         </div>
     )
