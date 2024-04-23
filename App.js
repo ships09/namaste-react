@@ -65,13 +65,13 @@ const Body = () => {
         </div>
     )
 }
-const RestaurantCard = (props) => {
-    console.log(props);
+const RestaurantCard = ({restName, cuisine}) => { //eg of destructuring 
+    // console.log(props);
     return (
         <div className="rest-card" >
             <img className="rest-img"  src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/a9ecb33c07e35203eb806382efa93982" />
-            <h3>{props.restName}</h3>
-            <h4>{props.cuisine}</h4>
+            <h3>{restName}</h3>
+            <h4>{cuisine}</h4>
             <h4>Rating: 4.9</h4>
             <h4>25 mins</h4>
         </div>
