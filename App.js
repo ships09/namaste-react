@@ -1,34 +1,84 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-const heading1 = React.createElement("h1", {id: "heading", class:"heading"}, "Namaste React");
-//root.render(heading1);
-//JSX is html like or xml like syntax
-//React Element
-const heading = (<h1 id="heading" className="heading" tabIndex="1">Namaste from JSX</h1>);
+/************
+ * Header
+ *  Logo
+ *  Nav items - home card
+ * Footer
+ *  Copyright
+ *  About us 
+ *  Links
+ *  Contact
+ * Body Component
+ *  Search
+ *  Restaurant Container
+ *      Restaurant Cards
+ *          image, name, star rating, cuisine, delivery time 
+ * 
+ * 
+ * 
+ * 
+ */
+const styleCard = {
+    background:"pink"
 
-//React Functional Component
-const Title = () => (
-
-    <h1 className="heading"> Namaste React from JSX</h1>
-)
-//This is also a valid code
-const TitleOne = function () {
+}
+const Header = () => {
     return (
-        <div id="subcontainer"><h1  > Namaste React from JSX</h1></div>
+        <div className="header">
+            <div>
+                <img src="https://as1.ftcdn.net/v2/jpg/07/31/22/94/1000_F_731229489_yRCbqgB3vPjVIeUwIvBKggIjlr4UTL1p.jpg" className="logo" />
+            </div>
+            <div className="siteName">My Food Zone </div>
+            <div className="headerLinks">
+                <ul>
+                    <li>Home</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>
     )
 }
-const numericvalue = 99;
-const HeadingComponent = () => (
-    <div id="container">
-    <TitleOne></TitleOne>
-    <TitleOne />
-    <Title />
-    {numericvalue}
-    {console.log('shilpa')}
-    {Title()}
-    <h1 id="heading" className="heading">Namaste React from Functional Component</h1>
-    </div>
-)
-root.render(<HeadingComponent />);
+
+const Footer = () => {
+    return (
+        <div className="footer">
+            <ul>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Careers</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+    )
+}
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search">Search </div>
+            <div className="restaurantContainer">
+                <RestaurantCard />
+            </div>
+        </div>
+    )
+}
+const RestaurantCard = () => {
+    return (
+        <div className="rest-card" style={styleCard}>
+            <h3>Madras Cafe</h3>
+        </div>
+    )
+}
+const AppLayout = () => {
+    return (
+        <div className="app">
+            <Header />
+            <Body />
+            <Footer />
+        </div>
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);

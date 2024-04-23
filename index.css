@@ -8,3 +8,40 @@
 t1 {
     font-style: italic;
 }
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    border: 1px solid silver;
+}
+
+.logo {
+    width:90px;
+    height:auto;
+}
+.siteName {
+    text-align: center;
+    color: red;
+    padding: 8px 0;
+    font-size: 40px;
+}
+
+.headerLinks li, .footer li {
+    display:inline;
+    padding: 0 5px;
+}
+
+.search {
+    padding:10px;
+}
+
+.restaurantContainer {
+    display: flex;
+}
+
+.rest-card {
+    border:1px solid silver;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+}
