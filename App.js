@@ -20,7 +20,7 @@ import ReactDOM from "react-dom/client";
  * 
  * 
  */
-const styleCard = {
+const styleCard = { /*js object pass it to style attribute in {} */
     background:"pink"
 
 }
@@ -58,15 +58,22 @@ const Body = () => {
         <div className="body">
             <div className="search">Search </div>
             <div className="restaurantContainer">
-                <RestaurantCard />
+                <RestaurantCard restName="Madras Cafe" cuisine="South Indian" />
+                <RestaurantCard restName="Burger King" cuisine="American" />
+     
             </div>
         </div>
     )
 }
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+    console.log(props);
     return (
-        <div className="rest-card" style={{background:"pink"}}>
-            <h3>Madras Cafe</h3>
+        <div className="rest-card" >
+            <img className="rest-img"  src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/a9ecb33c07e35203eb806382efa93982" />
+            <h3>{props.restName}</h3>
+            <h4>{props.cuisine}</h4>
+            <h4>Rating: 4.9</h4>
+            <h4>25 mins</h4>
         </div>
     )
 }

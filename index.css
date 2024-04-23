@@ -37,6 +37,7 @@ t1 {
 
 .restaurantContainer {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .rest-card {
@@ -44,4 +45,11 @@ t1 {
     width: 200px;
     height: auto;
     padding: 10px;
+    background: pink;
+    margin: 5px;
+}
+
+.rest-img {
+    width:100%;
+    height: auto;
 }
