@@ -65,7 +65,8 @@ const Body = () => {
         </div>
     )
 }
-const RestaurantCard = ({restName, cuisine}) => { //eg of destructuring 
+const RestaurantCard = (props) => {  
+    const {restName, cuisine} = props;
     // console.log(props);
     return (
         <div className="rest-card" >
