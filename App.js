@@ -1796,10 +1796,13 @@ const Body = () => {
         <div className="body">
             <div className="search">Search </div>
             <div className="restaurantContainer">
-                <RestaurantCard restData={restList[3]} />
-                <RestaurantCard restData={restList[13]} />
-                <RestaurantCard restData={restList[2]} />
-                <RestaurantCard restData={restList[0]} />
+                {
+                    //restList.map((restaurant, index) => <RestaurantCard key={index} restData={restaurant} />)
+                    restList.map((restaurant) => <RestaurantCard key={restaurant.info.id} restData={restaurant} />)
+    
+                    
+                }
+            
             </div>
         </div>
     )
